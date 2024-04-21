@@ -1,5 +1,53 @@
 # Socket_Programming
 
+## How to Start
+
+1. **Extract Files:**
+   - Unzip the downloaded file to extract its contents.
+
+2. **Compile Server File:**
+   - Navigate to the directory containing the server file (`a.server.c`).
+   - Compile the server code using GCC:
+     ```
+     gcc a.server.c -o server
+     ```
+   - Replace `<server>` with your desired executable name.
+   
+3. **Run Server:**
+   - Execute the compiled server program:
+     ```
+     ./server <server_name> 1212
+     ```
+   - Replace `<server_name>` with the name you assigned to the server executable.
+   - `1212` represents the port number the server will listen on. You can choose any available port number.
+
+4. **Compile Client File:**
+   - Navigate to the directory containing the client file (`b.client.c`).
+   - Compile the client code using GCC:
+     ```
+     gcc b.client.c -o client
+     ```
+   - Replace `<client>` with your desired executable name.
+
+5. **Run Client:**
+   - Execute the compiled client program:
+     ```
+     ./client <client_name> 127.0.0.1 1212
+     ```
+   - Replace `<client_name>` with the name you assigned to the client executable.
+   - `127.0.0.1` represents the IP address of the server. If the server and client are on the same system, use this loopback address. If they are on different systems, use the IP address of the server.
+   - `1212` should match the port number specified when starting the server.
+
+6. **Follow Instructions:**
+   - Follow the instructions provided by the server and client applications to interact with them effectively.
+   
+7. **Ensure Perfection:**
+   - Double-check all commands, file names, IP addresses, and port numbers to ensure accuracy and avoid errors.
+   - Troubleshoot any issues that may arise during the setup process for smooth operation.
+
+
+
+
 ## Tic Tac Toe Game - Server and Client
 
 ### Overview:
