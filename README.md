@@ -58,6 +58,72 @@ This program implements a simple Tic Tac Toe game using a client-server architec
 - Standard C libraries: `stdio.h`, `stdlib.h`, `string.h`, `unistd.h`, `arpa/inet.h`, `netinet/in.h`.
 - Assumes the availability of functions `recv()` and `send()` for network communication.
 
+Here's the README file for the Snake and Ladder game server and client:
+
+## Snake and Ladder Game - Server and Client
+
+### Overview:
+
+This program implements a Snake and Ladder game using a client-server architecture. The server hosts the game, and clients can connect to play against each other.
+
+### Server Part:
+
+- **Functionality:**
+  - Hosts the Snake and Ladder game.
+  - Manages player movements based on dice rolls.
+  - Handles snakes and ladders interactions.
+  - Sends game board updates to clients.
+
+### Client Part:
+
+- **Functionality:**
+  - Connects to the Snake and Ladder game server.
+  - Displays the game board.
+  - Allows players to roll the dice and see the results.
+  - Receives game board updates from the server.
+
+### How to Use:
+
+1. **Compilation:**
+   - Compile the server program using a C compiler, such as `gcc`.
+   - Compile the client program using a C compiler, such as `gcc`.
+
+2. **Execution:**
+   - Run the server program first. It will start hosting the Snake and Ladder game.
+   - Run the client program to connect to the server and start playing the game.
+
+3. **Gameplay:**
+   - Players take turns rolling the dice.
+   - The server calculates the new position based on the dice roll and handles snakes and ladders.
+   - The game continues until one player reaches the final square (100).
+
+4. **End of Game:**
+   - The server declares the winner when one player reaches the final square.
+   - Players can continue playing by rolling the dice until the game ends.
+
+### Additional Notes:
+
+- Ensure that both the server and client programs are executed on the same network for communication.
+- The server listens on a specified port for client connections.
+- The client program should specify the IP address and port number of the server to connect.
+- The game board displays the positions of both players, snakes, and ladders.
+- The client sends a request to roll the dice to the server, which sends back the result.
+
+### Files:
+
+- **server.c:** Contains the server-side code for hosting the Snake and Ladder game.
+- **client.c:** Contains the client-side code for connecting to the server and playing the game.
+
+### Dependencies:
+
+- Standard C libraries: `stdio.h`, `stdlib.h`, `string.h`, `time.h`.
+- Assumes the availability of functions `recv()` and `send()` for network communication.
+- Uses ANSI escape codes for colored output on supported terminals.
+
+Feel free to modify and extend the code according to your needs or project requirements. Enjoy playing Snake and Ladder with friends over a network!
+
+
+
 
 ## Maze Escape Game
 
