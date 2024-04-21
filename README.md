@@ -58,7 +58,8 @@ This program implements a simple Tic Tac Toe game using a client-server architec
 - Standard C libraries: `stdio.h`, `stdlib.h`, `string.h`, `unistd.h`, `arpa/inet.h`, `netinet/in.h`.
 - Assumes the availability of functions `recv()` and `send()` for network communication.
 
-Here's the README file for the Snake and Ladder game server and client:
+
+
 
 ## Snake and Ladder Game - Server and Client
 
@@ -120,7 +121,66 @@ This program implements a Snake and Ladder game using a client-server architectu
 - Assumes the availability of functions `recv()` and `send()` for network communication.
 - Uses ANSI escape codes for colored output on supported terminals.
 
-Feel free to modify and extend the code according to your needs or project requirements. Enjoy playing Snake and Ladder with friends over a network!
+
+
+
+### System of Linear Equations Solver - Server and Client
+
+#### Overview:
+
+This program implements a system of linear equations solver using a client-server architecture. The server hosts the solver, and clients can connect to solve their systems of linear equations.
+
+#### Server Part:
+
+- **Functionality:**
+  - Hosts the system of linear equations solver.
+  - Implements Gaussian elimination to solve the equations.
+  - Sends the solution (if exists) or information about the solution type back to the client.
+
+#### Client Part:
+
+- **Functionality:**
+  - Connects to the server to solve a system of linear equations.
+  - Sends the coefficients and constants of the equations to the server.
+  - Receives and displays the solution or information about the solution type from the server.
+
+#### How to Use:
+
+1. **Compilation:**
+   - Compile the server program using a C compiler, such as `gcc`.
+   - Compile the client program using a C compiler, such as `gcc`.
+
+2. **Execution:**
+   - Run the server program first. It will start hosting the linear equations solver.
+   - Run the client program to connect to the server and solve the system of linear equations.
+
+3. **Input:**
+   - Provide the number of equations and variables.
+   - Enter the coefficients of each equation and constants.
+   - The client sends this input to the server.
+
+4. **Output:**
+   - The server calculates the solution using Gaussian elimination.
+   - It sends the solution type (unique, infinite, or no solution) and the solution (if exists) back to the client.
+   - The client displays the solution or information about the solution type.
+
+#### Additional Notes:
+
+- Ensure that both the server and client programs are executed on the same network for communication.
+- The server listens on a specified port for client connections.
+- The client program should specify the IP address and port number of the server to connect.
+- The solver uses Gaussian elimination to solve the system of linear equations.
+- It communicates with the client to send and receive data related to the equations and solution.
+
+#### Files:
+
+- **server.c:** Contains the server-side code for hosting the linear equations solver.
+- **client.c:** Contains the client-side code for connecting to the server and solving the equations.
+
+#### Dependencies:
+
+- Standard C libraries: `stdio.h`, `stdlib.h`, `string.h`, `math.h`.
+- Assumes the availability of functions `recv()` and `send()` for network communication.
 
 
 
