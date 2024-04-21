@@ -126,25 +126,25 @@ This program implements a Snake and Ladder game using a client-server architectu
 
 ## System of Linear Equations Solver - Server and Client
 
-#### Overview:
+### Overview:
 
 This program implements a system of linear equations solver using a client-server architecture. The server hosts the solver, and clients can connect to solve their systems of linear equations.
 
-#### Server Part:
+### Server Part:
 
 - **Functionality:**
   - Hosts the system of linear equations solver.
   - Implements Gaussian elimination to solve the equations.
   - Sends the solution (if exists) or information about the solution type back to the client.
 
-#### Client Part:
+### Client Part:
 
 - **Functionality:**
   - Connects to the server to solve a system of linear equations.
   - Sends the coefficients and constants of the equations to the server.
   - Receives and displays the solution or information about the solution type from the server.
 
-#### How to Use:
+### How to Use:
 
 1. **Compilation:**
    - Compile the server program using a C compiler, such as `gcc`.
@@ -164,7 +164,7 @@ This program implements a system of linear equations solver using a client-serve
    - It sends the solution type (unique, infinite, or no solution) and the solution (if exists) back to the client.
    - The client displays the solution or information about the solution type.
 
-#### Additional Notes:
+### Additional Notes:
 
 - Ensure that both the server and client programs are executed on the same network for communication.
 - The server listens on a specified port for client connections.
@@ -172,12 +172,12 @@ This program implements a system of linear equations solver using a client-serve
 - The solver uses Gaussian elimination to solve the system of linear equations.
 - It communicates with the client to send and receive data related to the equations and solution.
 
-#### Files:
+### Files:
 
 - **server.c:** Contains the server-side code for hosting the linear equations solver.
 - **client.c:** Contains the client-side code for connecting to the server and solving the equations.
 
-#### Dependencies:
+### Dependencies:
 
 - Standard C libraries: `stdio.h`, `stdlib.h`, `string.h`, `math.h`.
 - Assumes the availability of functions `recv()` and `send()` for network communication.
