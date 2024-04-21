@@ -185,6 +185,66 @@ This program implements a system of linear equations solver using a client-serve
 
 
 
+### Polynomial Equation Solver - Server and Client
+
+#### Overview:
+
+This program implements a polynomial equation solver using a client-server architecture. The server hosts the solver, and clients can connect to solve their polynomial equations.
+
+#### Server Part:
+
+- **Functionality:**
+  - Hosts the polynomial equation solver.
+  - Implements bisection, Newton's method, and secant method to find roots of the polynomial equation.
+  - Sends the roots back to the client.
+
+#### Client Part:
+
+- **Functionality:**
+  - Connects to the server to solve a polynomial equation.
+  - Sends the degree and coefficients of the polynomial equation, along with initial guesses and interval bounds, to the server.
+  - Receives and displays the roots of the polynomial equation from the server.
+
+#### How to Use:
+
+1. **Compilation:**
+   - Compile the server program using a C compiler, such as `gcc`.
+   - Compile the client program using a C compiler, such as `gcc`.
+
+2. **Execution:**
+   - Run the server program first. It will start hosting the polynomial equation solver.
+   - Run the client program to connect to the server and solve the polynomial equation.
+
+3. **Input:**
+   - Provide the degree of the polynomial equation.
+   - Enter the coefficients of the polynomial equation in descending order of degree.
+   - Provide an initial guess for iterative methods (Newton's method and secant method).
+   - Specify an initial interval \([a, b]\) for the bisection method.
+
+4. **Output:**
+   - The server calculates the roots using various methods and sends them back to the client.
+   - The client displays the roots of the polynomial equation.
+
+#### Additional Notes:
+
+- Ensure that both the server and client programs are executed on the same network for communication.
+- The server listens on a specified port for client connections.
+- The client program should specify the IP address and port number of the server to connect.
+- The solver offers multiple methods (bisection, Newton's method, secant method) for finding roots based on the user's input.
+- It communicates with the client to send and receive data related to the polynomial equation and roots.
+
+#### Files:
+
+- **server.c:** Contains the server-side code for hosting the polynomial equation solver.
+- **client.c:** Contains the client-side code for connecting to the server and solving the polynomial equation.
+
+#### Dependencies:
+
+- Standard C libraries: `stdio.h`, `stdlib.h`, `math.h`.
+- Assumes the availability of functions `recv()` and `send()` for network communication.
+
+
+
 ## Maze Escape Game
 
 ### Introduction
