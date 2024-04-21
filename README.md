@@ -245,41 +245,57 @@ This program implements a polynomial equation solver using a client-server archi
 
 
 
-## Maze Escape Game
+## Maze Escape Game Readme
 
-### Introduction
-Maze Escape is a text-based game where you navigate through a maze-like grid to reach the end point. The game consists of multiple levels, each with increasing difficulty.
+### Game Overview:
 
-### Features
-- Randomly generated maze-like grids for each level.
-- Obstacles and pitfalls scattered throughout the grid to challenge the player.
-- Simple controls for movement: Up (8), Down (2), Left (4), Right (6).
-- Clear rules and instructions provided at the start of the game.
+The Maze Escape Game is an exciting adventure where players navigate through a maze to reach the end point while avoiding obstacles and traps. Players start from the initial position and must find a way to the last position on the game board. If they encounter traps or fail to reach the end, they have options to restart the game from the beginning or continue from a specific level.
 
-### How to Play
-1. Compile and run the `version.c` file using a C compiler.
-2. Follow the on-screen instructions to navigate through the maze.
-3. Use the controls to move the player character ('P') towards the exit ('E').
-4. Avoid obstacles ('X') and pitfalls ('*') to prevent losing the game.
-5. Reach the end point to progress to the next level.
+### Game Rules:
 
-### Controls
-- Enter `0` to display the game rules.
-- Use `2`, `4`, `6`, `8` to move the player character: Down, Left, Right, Up respectively.
-- At the end of each level, enter `Y` to progress to the next level or any other key to quit.
-- If you lose strictly before level 5 then you to restart the game from level 1 or in other cases you will get chance to continue game from level 5.
+- Players are placed at the 1st position on the game board and must reach the last position to win.
+- If a player loses before reaching level 5, they must restart the game from level 1.
+- If a player loses at level 5 or beyond, they can restart the game from level 5.
+- Players can move in four directions: Up, Down, Left, and Right.
+- Players should avoid obstacles ('X') and traps ('*') on the game board.
+- To move, players need to input the following keys:
+  - 'w' or 'W' to move Up
+  - 's' or 'S' to move Down
+  - 'a' or 'A' to move Left
+  - 'd' or 'D' to move Right
 
-### Game Progression
-- The game consists of multiple levels, each with a unique randomly generated maze.
-- As you progress through levels, the difficulty increases with more obstacles and pitfalls.
-- Win the end of level 7 to win the game and become the ultimate maze escape champion!
+### Game Mechanics:
 
-### Requirements
-- C Compiler (GCC recommended)
-- Standard C Libraries: `stdio.h`, `stdlib.h`, `time.h`
+- The game board is a 16x16 grid.
+- The player ('P') starts at position (0, 0) and must reach position (15, 15) to win.
+- Obstacles ('X') are randomly placed on the game board to add challenge.
+- Traps ('*') are also placed randomly, and if a player steps on a trap, they might lose the game depending on the level.
+- Players can move one step at a time and must make strategic decisions to avoid obstacles and traps.
+- The game offers multiple levels, and each level increases in difficulty.
+- Players have the option to restart the game from level 1 or level 5 if they lose.
 
-### Author
-Created by Asadullah Faisal(Faizal)
+### Game Implementation:
 
-### Acknowledgments
-Inspired by maze games and programming challenges.
+- The game is implemented in C language.
+- The `makeboard` function initializes the game board with obstacles, traps, player position, and end point.
+- Players can input their moves, and the `movement` function handles player movement and validates input.
+- The `isValidPath` function checks if there is a valid path to reach the end point.
+- Players receive feedback on their moves and game progress.
+- The game continues until the player reaches the end, encounters a trap, or completes all levels.
+
+### Running the Game:
+
+- Compile the source code using a C compiler.
+- Run the executable file to start the game.
+- Follow the on-screen instructions to play the game.
+- Enjoy the challenge of navigating through the maze and reaching the end!
+
+### Additional Notes:
+
+- Players can explore different strategies to find the optimal path through the maze.
+- The game offers a blend of strategy, problem-solving, and entertainment.
+- Players can compete with friends to see who can complete all levels with the fewest moves.
+
+### Have Fun Playing!
+
+Enjoy the Maze Escape Game and challenge yourself to conquer all levels. Good luck, and may your escape be swift and successful!
