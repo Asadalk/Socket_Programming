@@ -245,7 +245,7 @@ This program implements a polynomial equation solver using a client-server archi
 
 
 
-## Maze Escape Game Readme
+## Maze Escape Game - Server and Client
 
 ### Game Overview:
 
