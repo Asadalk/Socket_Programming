@@ -347,3 +347,30 @@ The Maze Escape Game is an exciting adventure where players navigate through a m
 ### Have Fun Playing!
 
 Enjoy the Maze Escape Game and challenge yourself to conquer all levels. Good luck, and may your escape be swift and successful!
+
+
+
+
+## Differential Equation Solver
+
+The server and client applications provide functionality to solve ordinary differential equations (ODEs) using the Runge-Kutta method.
+
+### Server
+
+The server application listens for client connections and offers the option to solve a differential equation upon request.
+
+1. **calculate_term**: This function calculates the value of a given term in the differential equation at a specific point (x, y).
+2. **rk**: This function performs the Runge-Kutta method to approximate the solution of the differential equation.
+
+Upon receiving a client connection, the server prompts the user to choose an option:
+- If the user chooses option 6, the server invokes the `playGame6` function to handle the differential equation solving.
+
+### Client
+
+The client application connects to the server and allows the user to request the solution of a differential equation by providing the necessary parameters.
+
+1. **playGame6**: This function handles the process of solving a differential equation by communicating with the server.
+   
+   - It prompts the user to input the differential equation, initial values, final x-value, and step size (h).
+   - Sends the input parameters to the server.
+   - Receives the solution from the server and displays it to the user.
