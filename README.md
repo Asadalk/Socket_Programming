@@ -1,4 +1,64 @@
 # Socket_Programming
+
+## Tic Tac Toe Game - Server and Client
+
+### Overview:
+
+This program implements a simple Tic Tac Toe game using a client-server architecture. The server hosts the game, and clients can connect to play against each other.
+
+### Server Part:
+
+- **Functionality:**
+  - Hosts the Tic Tac Toe game.
+  - Receives player moves from clients.
+  - Validates moves and checks for a winner or draw.
+  - Sends game status updates to clients.
+
+### Client Part:
+
+- **Functionality:**
+  - Connects to the Tic Tac Toe game server.
+  - Displays the game board.
+  - Allows the player to make moves by choosing cell numbers.
+  - Sends moves to the server and receives updates.
+
+### How to Use:
+
+1. **Compilation:**
+   - Compile the server program using a C compiler, such as `gcc`.
+   - Compile the client program using a C compiler, such as `gcc`.
+
+2. **Execution:**
+   - Run the server program first. It will start hosting the Tic Tac Toe game.
+   - Run the client program to connect to the server and start playing the game.
+
+3. **Gameplay:**
+   - Players take turns making moves by entering cell numbers (1 to 9).
+   - The server validates each move and checks for a winner or draw after each move.
+   - The game continues until one player wins or the game ends in a draw.
+
+4. **End of Game:**
+   - If one player wins, the server sends a message indicating the winner to both clients.
+   - If the game ends in a draw, the server sends a draw message to both clients.
+
+### Additional Notes:
+
+- Ensure that both the server and client programs are executed on the same network for communication.
+- The server listens on a specified port (8080 by default) for client connections.
+- The client program should specify the IP address and port number of the server to connect.
+- Error handling is basic and may need enhancements for robustness in a production environment.
+
+### Files:
+
+- **server.c:** Contains the server-side code for hosting the Tic Tac Toe game.
+- **client.c:** Contains the client-side code for connecting to the server and playing the game.
+
+### Dependencies:
+
+- Standard C libraries: `stdio.h`, `stdlib.h`, `string.h`, `unistd.h`, `arpa/inet.h`, `netinet/in.h`.
+- Assumes the availability of functions `recv()` and `send()` for network communication.
+
+
 ## Maze Escape Game
 
 ### Introduction
