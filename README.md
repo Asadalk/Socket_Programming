@@ -124,7 +124,7 @@ This program implements a Snake and Ladder game using a client-server architectu
 
 
 
-### System of Linear Equations Solver - Server and Client
+## System of Linear Equations Solver - Server and Client
 
 #### Overview:
 
