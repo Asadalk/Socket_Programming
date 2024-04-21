@@ -185,27 +185,27 @@ This program implements a system of linear equations solver using a client-serve
 
 
 
-### Polynomial Equation Solver - Server and Client
+## Polynomial Equation Solver - Server and Client
 
-#### Overview:
+### Overview:
 
 This program implements a polynomial equation solver using a client-server architecture. The server hosts the solver, and clients can connect to solve their polynomial equations.
 
-#### Server Part:
+### Server Part:
 
 - **Functionality:**
   - Hosts the polynomial equation solver.
   - Implements bisection, Newton's method, and secant method to find roots of the polynomial equation.
   - Sends the roots back to the client.
 
-#### Client Part:
+### Client Part:
 
 - **Functionality:**
   - Connects to the server to solve a polynomial equation.
   - Sends the degree and coefficients of the polynomial equation, along with initial guesses and interval bounds, to the server.
   - Receives and displays the roots of the polynomial equation from the server.
 
-#### How to Use:
+### How to Use:
 
 1. **Compilation:**
    - Compile the server program using a C compiler, such as `gcc`.
@@ -225,7 +225,7 @@ This program implements a polynomial equation solver using a client-server archi
    - The server calculates the roots using various methods and sends them back to the client.
    - The client displays the roots of the polynomial equation.
 
-#### Additional Notes:
+### Additional Notes:
 
 - Ensure that both the server and client programs are executed on the same network for communication.
 - The server listens on a specified port for client connections.
@@ -233,12 +233,12 @@ This program implements a polynomial equation solver using a client-server archi
 - The solver offers multiple methods (bisection, Newton's method, secant method) for finding roots based on the user's input.
 - It communicates with the client to send and receive data related to the polynomial equation and roots.
 
-#### Files:
+### Files:
 
 - **server.c:** Contains the server-side code for hosting the polynomial equation solver.
 - **client.c:** Contains the client-side code for connecting to the server and solving the polynomial equation.
 
-#### Dependencies:
+### Dependencies:
 
 - Standard C libraries: `stdio.h`, `stdlib.h`, `math.h`.
 - Assumes the availability of functions `recv()` and `send()` for network communication.
