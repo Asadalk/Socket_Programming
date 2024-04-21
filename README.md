@@ -9,7 +9,7 @@
    - Navigate to the directory containing the server file (`a.server.c`).
    - Compile the server code using GCC:
      ```
-     gcc a.server.c -o server
+     gcc server.c -o server
      ```
    - Replace `<server>` with your desired executable name.
    
@@ -25,7 +25,7 @@
    - Navigate to the directory containing the client file (`b.client.c`).
    - Compile the client code using GCC:
      ```
-     gcc b.client.c -o client
+     gcc client.c -o client
      ```
    - Replace `<client>` with your desired executable name.
 
